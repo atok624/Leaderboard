@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Oussama @codedit334" />
+    <meta name="description" content="ToDo List using webpack" />
+    <meta name="keywords" content="Todo, webpack, ES6" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+
+  <body>
+    <main>
+      <section class="scores-section">
+        <h1>Leaderboard</h1>
+        <div class="scores-wrapper">
+          <article class="scores-display">
+            <div>
+              <div class="scores-display-title">
+                <h2 class="scores-recent">Recent scores</h2>
+                <button class="refresh">Refresh</button></div>
+              </div>
+            <div class="scores-display-content">
+              <ul class="scores-display-list">
+                <li>John: 100</li>
+                <li>stephen: 20</li>
+                <li>Samuel: 50</li>
+                <li>Nicholas: 78</li>
+                <li>Eunice: 125</li>
+              </ul>
+            </div>
+          </article>
+          <article class="scores-add">
+            <h2 class="scores-add">Add your score</h2>
+            <form action="">
+              <label for="form-name" hidden></label>
+              <input type="text" id="form-name" placeholder="Your name" /><br />
+              <label for="form-score" hidden> </label>
+              <input
+                type="text"
+                id="form-score"
+                placeholder="Your score"
+              /><br />
+              <button class="form-submit">submit</button>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
