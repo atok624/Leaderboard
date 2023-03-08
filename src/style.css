@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Righteous', sans-serif;
+  font-weight: 400;
+}
+
+main {
+  background-image: url("./Images/diamond.png");
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #272a31;
+
+  /* width: 100vw; */
+  height: 100vh;
+}
+
+h1 {
+  align-self: self-start;
+  padding: 20px 0;
+  font-size: 250%;
+}
+
+section {
+  margin-top: 50px;
+  width: 50%;
+  display: flex;
+  background-color: beige;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #d3d3d3 1px solid;
+  padding: 20px 10px 50px 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 1);
+}
+
+.scores-wrapper {
+  display: flex;
+  gap: 140px;
+}
+
+.scores-display-title {
+  display: flex;
+  gap: 20px;
+}
+
+.refresh {
+  background-color: transparent;
+  padding: 0 10px;
+  border: 3.5px solid black;
+}
+
+.scores-display-content {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  width: 89%;
+  border: 3.5px solid black;
+  min-height: 100px;
+}
+
+.scores-display-list li {
+  padding: 5px 0 5px 8px;
+  list-style: none;
+}
+
+.scores-display-list li:nth-of-type(even) {
+  background-color: rgb(235, 235, 235);
+}
+
+form {
+  position: relative;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#form-name,
+#form-score {
+  border: 3.5px solid black;
+  padding: 4px;
+  margin-bottom: 5px;
+}
+
+#form-name:focus,
+#form-score:focus {
+  outline: none;
+}
+
+.form-submit {
+  align-self: flex-end;
+  width: 80px;
+  background-color: transparent;
+  border: 3.5px solid black;
+  padding: 4px 0;
+}
