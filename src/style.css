@@ -1,107 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Basic styles for HTML elements */
 
-* {
-  margin: 0;
-  padding: 0;
+html {
+  height: 100vh;
+  font-size: 62.5%;
   box-sizing: border-box;
-  font-family: 'Righteous', sans-serif;
-  font-weight: 400;
 }
 
-main {
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
   background-image: url("./Images/diamond.png");
   background-repeat: repeat;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #272a31;
-  height: 100vh;
+  background-color: #0f0a17;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #4caf50;
+}
+
+h1,
+h2 {
+  font-weight: normal;
 }
 
 h1 {
-  align-self: self-start;
-  padding: 20px 0;
-  font-size: 250%;
+  font-size: 350%;
 }
 
-section {
-  margin-top: 50px;
-  width: 50%;
-  display: flex;
-  background-color: beige;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: #d3d3d3 1px solid;
-  padding: 20px 10px 50px 10px;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 1);
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Styles for specific classes and IDs */
+
+.scores-section {
+  padding: 3rem;
+  text-align: center;
 }
 
 .scores-wrapper {
   display: flex;
-  gap: 140px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.scores-display {
+  width: 60%;
+  color: #0f0a17;
+  font-size: large;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .scores-display-title {
   display: flex;
-  gap: 20px;
-}
-
-.refresh {
-  background-color: transparent;
-  padding: 0 10px;
-  border: 3.5px solid black;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .scores-display-content {
-  position: relative;
-  left: 50%;
   overflow-y: scroll;
-  transform: translateX(-50%);
-  top: 20px;
-  width: 89%;
-  border: 3.5px solid black;
-  min-height: 100px;
-  max-height: 200px;
+  max-height: 400px;
 }
 
-.scores-display-list li {
-  padding: 5px 0 5px 8px;
-  list-style: none;
+.refresh {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-table > tbody > tr:nth-of-type(even) {
-  background-color: rgb(235, 235, 235);
+.score-add {
+  font-weight: bolder;
 }
 
-form {
-  position: relative;
-  top: 20px;
-  display: flex;
-  flex-direction: column;
+.scores-add {
+  width: 35%;
 }
 
 #form-name,
 #form-score {
-  border: 3.5px solid black;
-  padding: 4px;
-  margin-bottom: 5px;
-}
-
-table {
-  padding: 10px;
-}
-
-#form-name:focus,
-#form-score:focus {
-  outline: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 .form-submit {
-  align-self: flex-end;
-  width: 80px;
-  background-color: transparent;
-  border: 3.5px solid black;
-  padding: 4px 0;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.table-body tr:nth-child(even) {
+  background-color: #4caf50;
+}
+
+.table-body tr:nth-child(odd) {
+  background-color: #d3d3d3;
+}
+
+.table-body tr:nth-child(even):hover {
+  background-color: #d3d3d3;
+  color: #0f0a17;
+}
+
+.table-body tr:nth-child(odd):hover {
+  background-color: #4caf50;
+  color: #0f0a17;
+}
+
+.scores-recent {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Define animation keyframes */
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to h1 */
+/* stylelint-disable-next-line no-duplicate-selectors */
+h1 {
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+/* Add transition to button and input elements */
+button,
+input {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Add hover styles to button element */
+button:hover {
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Add focus styles to input elements */
+input:focus {
+  outline: none;
+  border: 2px solid #555;
+}
+
+@media screen and (max-width: 768px) {
+  .scores-section {
+    padding: 2rem;
+  }
+
+  .scores-wrapper {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .scores-display {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .scores-add {
+    width: 100%;
+  }
+
+  #form-name,
+  #form-score {
+    margin-bottom: 2rem;
+  }
 }
