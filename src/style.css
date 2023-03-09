@@ -16,8 +16,6 @@ main {
   justify-content: center;
   align-items: center;
   background-color: #272a31;
-
-  /* width: 100vw; */
   height: 100vh;
 }
 
@@ -59,11 +57,13 @@ section {
 .scores-display-content {
   position: relative;
   left: 50%;
+  overflow-y: scroll;
   transform: translateX(-50%);
   top: 20px;
   width: 89%;
   border: 3.5px solid black;
   min-height: 100px;
+  max-height: 200px;
 }
 
 .scores-display-list li {
@@ -71,7 +71,7 @@ section {
   list-style: none;
 }
 
-.scores-display-list li:nth-of-type(even) {
+table > tbody > tr:nth-of-type(even) {
   background-color: rgb(235, 235, 235);
 }
 
@@ -87,6 +87,10 @@ form {
   border: 3.5px solid black;
   padding: 4px;
   margin-bottom: 5px;
+}
+
+table {
+  padding: 10px;
 }
 
 #form-name:focus,
