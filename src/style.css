@@ -1,0 +1,204 @@
+/* Basic styles for HTML elements */
+
+html {
+  height: 100vh;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url("./Images/diamond.png");
+  background-repeat: repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0a17;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #4caf50;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 350%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Styles for specific classes and IDs */
+
+.scores-section {
+  padding: 3rem;
+  text-align: center;
+}
+
+.scores-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.scores-display {
+  width: 60%;
+  color: #0f0a17;
+  font-size: large;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.scores-display-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.scores-display-content {
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+.refresh {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.score-add {
+  font-weight: bolder;
+}
+
+.scores-add {
+  width: 35%;
+}
+
+#form-name,
+#form-score {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-submit {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.table-body tr:nth-child(even) {
+  background-color: #4caf50;
+}
+
+.table-body tr:nth-child(odd) {
+  background-color: #d3d3d3;
+}
+
+.table-body tr:nth-child(even):hover {
+  background-color: #d3d3d3;
+  color: #0f0a17;
+}
+
+.table-body tr:nth-child(odd):hover {
+  background-color: #4caf50;
+  color: #0f0a17;
+}
+
+.scores-recent {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Define animation keyframes */
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to h1 */
+/* stylelint-disable-next-line no-duplicate-selectors */
+h1 {
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+/* Add transition to button and input elements */
+button,
+input {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Add hover styles to button element */
+button:hover {
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Add focus styles to input elements */
+input:focus {
+  outline: none;
+  border: 2px solid #555;
+}
+
+@media screen and (max-width: 768px) {
+  .scores-section {
+    padding: 2rem;
+  }
+
+  .scores-wrapper {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .scores-display {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .scores-add {
+    width: 100%;
+  }
+
+  #form-name,
+  #form-score {
+    margin-bottom: 2rem;
+  }
+}
