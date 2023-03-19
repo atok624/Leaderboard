@@ -1,7 +1,6 @@
-/* eslint-disable import/extensions */
 import './style.css';
-import addData from './modules/add.js';
-import fetchData from './modules/fetch.js';
+import addData from './modules/add';
+import fetchData from './modules/fetch';
 
 const form = document.querySelector('form');
 const enterName = document.querySelector('#form-name');
