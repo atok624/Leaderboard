@@ -57,7 +57,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 Access the the online version of my application with this link
-[Live Demo](https://atok624.github.io/Leaderboard/)
+[Live Demo](https://leaderboard-xzry.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
