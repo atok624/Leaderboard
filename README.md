@@ -35,21 +35,29 @@
 - The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external
 
 ## 🛠 Built With <a name="built-with"></a>
+- Major Languages: JavaScript.
+- CSS Libraries: Bootstrap.
 
 ### Tech Stack <a name="tech-stack"></a>
-
--   HTML
--   CSS
--   JAVASCRIPT
+```md
+HTML
+CSS
+JAVASCRIPT
+BOOTSTRAP
+```
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
--   **Submit**
--   **Refresh**
+``` sh
+Submit
+Refresh
+```
 
 ### Future Features <a name="key-features"></a>
-- **API Functionality**
+``` sh
+API Functionality
+```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -64,28 +72,60 @@ Access the the online version of my application with this link
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-
+To get a local copy up and running, follow the steps in Setup below.
 ### Prerequisites
+```
+Basic knowledge of:
+- HTML
+- CSS
+- JavaScript
+```
 
-In order to run this project you need:
 
 ### Setup
+If you have git installed, you can clone the code to your machine, or download a ZIP of all the files directly.
 
-Clone this repository to your desired folder:
+[Download the ZIP from this location](https://codeload.github.com/atok624/Leaderboard/zip/refs/heads/master), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
 
 ```sh
   cd my-folder
-  git clone git@github.com:atok624/Leaderboard.git
+  git clone git@github.com:atok624/Capstone_Project1.git
 ```
 
-<!--
-Example:
+## Usage
 
+Run in development mode (Port 3000)
+
+```
+  npm run start
+```
+
+### Build for production
+
+```
+npm run build
+```
+
+### Run tests
+
+To run tests, run the following command:
 ```sh
-
+   npm test
 ```
- -->
+
+### Linter Tests
+- ### To check for html errors run:
+```sh
+  npx hint .
+```
+- ### To check for css errors run:
+```sh
+  npx stylelint "**/*.{css,scss}"
+```
+- ### To check for js errors run:
+```sh
+  npx eslint "**/*.{js,jsx}"
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,6 +150,7 @@ Example:
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
+#### Feel free to check the [issues page](https://github.com/atok624/Leaderboard/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
